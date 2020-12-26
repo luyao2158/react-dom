@@ -21,7 +21,22 @@ module.exports = merge(common, {
           }
         }
       })
-    ]
+    ],
+    splitChunks: {
+      automaticNameDelimiter: '-',
+      cacheGroups: {
+        verdor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+          minSine: 0,
+          priority: 1,
+          enforce: true,
+          reuseExistingChunk: true
+        }
+      },
+      chunks: 'all'
+    }
   },
   plugins: [
     new BundleAnalyzerPlugin()
