@@ -1,3 +1,19 @@
 node_modules
 
+**/.DS_Store
 .DS_Store
+.idea
+.vscode
+dist
+dist/*
+npm-debug.log
+*.swp
+*.log
+/local.json
+.eslinecache
+uapp-npm/lib
+/report.*.json
+*.key
+*.crt
+/report/*
+/debug/*
